@@ -89,12 +89,12 @@ const LCanvas = ({ children }) => {
       onCreated={(state) => state.events.connect(dom.current)}
     >
       {/* <LControl /> */}
-      <Suspense fallback={<CanvasLoader />}>
-        <Preload all />
-        <Environment preset="forest" />
-        {children}
-        <Effect on={on} />
-      </Suspense>
+      {/* <Suspense fallback={<CanvasLoader />}>
+        <Preload all /> */}
+      <Environment preset="forest" />
+      {children}
+      {/* <Effect on={on} />
+      </Suspense> */}
     </Canvas>
   )
 }

@@ -6,7 +6,12 @@ import gsap from "gsap";
 import dynamic from 'next/dynamic'
 import * as THREE from "three";
 
-
+import BabyEarthVox from "@mf/components/canvas/BabyEarth";
+import OctoEasterEgg from "@mf/components/canvas/EasterEgg";
+import Galaxy from "@mf/components/canvas/Galaxy";
+import JetsetterVox from "@mf/components/canvas/Jetsetter";
+import NomadVox from "@mf/components/canvas/Nomad";
+import OctoPetVox from "@mf/components/canvas/OctoPet";
 import {
   ApplySection,
   ChatSection,
@@ -33,37 +38,44 @@ import {
 // WARNING ! errors might get obfuscated by using dynamic import.
 // If something goes wrong go back to a static import to show the error.
 // https://github.com/pmndrs/react-three-next/issues/49
-const NomadVox = dynamic(() => import('@mf/components/canvas/Nomad'), {
-  ssr: false,
-})
-const JetsetterVox = dynamic(() => import('@mf/components/canvas/Jetsetter'), {
-  ssr: false,
-})
-const BabyEarthVox = dynamic(() => import('@mf/components/canvas/BabyEarth'), {
-  ssr: false,
-})
-const OctoPetVox = dynamic(() => import('@mf/components/canvas/OctoPet'), {
-  ssr: false,
-})
-const OctoEasterEgg = dynamic(() => import('@mf/components/canvas/EasterEgg'), {
-  ssr: false,
-})
-const Galaxy = dynamic(() => import('@mf/components/canvas/Galaxy'), {
-  ssr: false,
-})
+// const NomadVox = dynamic(() => import('@mf/components/canvas/Nomad'), {
+//   ssr: false,
+// })
+
+
+// const JetsetterVox = dynamic(() => import('@mf/components/canvas/Jetsetter'), {
+//   ssr: false,
+// })
+
+// const BabyEarthVox = dynamic(() => import('@mf/components/canvas/BabyEarth'), {
+//   ssr: false,
+// })
+
+// const OctoPetVox = dynamic(() => import('@mf/components/canvas/OctoPet'), {
+//   ssr: false,
+// })
+
+// const OctoEasterEgg = dynamic(() => import('@mf/components/canvas/EasterEgg'), {
+//   ssr: false,
+// })
+
+// const Galaxy = dynamic(() => import('@mf/components/canvas/Galaxy'), {
+//   ssr: false,
+// })
+
 
 // dom components goes here
 function DOM() {
   return <>
     <HomeSection />
     <LivestreamSection />
-      <ScheduleSection />
-      <WorkshopsSection />
-      <SpeakersSection />
-      <MetaverseSection />
-      <ChatSection />
-      <ApplySection />
-    </>
+    <ScheduleSection />
+    <WorkshopsSection />
+    <SpeakersSection />
+    <MetaverseSection />
+    <ChatSection />
+    <ApplySection />
+  </>
 }
 
 export const objectsDistance = 4;
@@ -291,7 +303,6 @@ function R3F() {
                   z: 0,
                 });
                 break;
-
             }
 
           }
